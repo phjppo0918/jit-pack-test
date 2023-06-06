@@ -1,12 +1,16 @@
 package org.example;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class CompHello {
-    public void chello(@Value("${jwt.asdf}") String asdf) {
-        System.out.println(asdf);
+    private final String adsf;
+
+    public CompHello(String adsf) {
+        this.adsf = adsf;
+    }
+
+    public void chello() {
+        System.out.println(adsf);
         System.out.println("Hello asdfasdf");
     }
 }
