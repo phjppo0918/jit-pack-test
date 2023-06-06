@@ -21,3 +21,15 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'org'
+            artifactId = 'example'
+            version = '0.1.4'
+
+            from components.java
+        }
+    }
+}
